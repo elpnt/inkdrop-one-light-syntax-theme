@@ -1,0 +1,235 @@
+@import "./colors";
+
+.editor {
+
+  .CodeMirror {
+    // Background color of main window
+    background-color: @syntax-bg;
+    color: @black;
+  }
+  .CodeMirror-scroll {
+    // Color of otherwise un-styled text
+    color: @black;
+  }
+  .CodeMirror-gutters {
+    // Gutter to the left
+    background-color: @syntax-bg;
+    color: @syntax-gutter;
+  }
+  .CodeMirror-linenumber {
+    // Line numbers in the gutter
+    color: @grey;
+    opacity: 0.6;
+  }
+
+  .CodeMirror-selected {
+    background-color: @light-grey;
+  }
+  .CodeMirror-focused .CodeMirror-selected {
+    background-color: @syntax-accent-2;
+  }
+  .CodeMirror-cursor {
+    // The cursor
+    border-left: 1px solid @syntax-cursor;
+  }
+  .CodeMirror-matchingbracket,
+  .CodeMirror-matchingtag {
+    // When you click a tag/bracket and the matching one is highlighted
+    color: @light-red !important;
+    border-bottom: 1px solid @light-red !important;
+  }
+  .CodeMirror-foldgutter-open:after {
+    // Those little arrows in the gutter
+    color: @syntax-gutter;
+  }
+  .CodeMirror-foldgutter-folded:after {
+    // The arrows after you collapse code
+    color: @syntax-gutter;
+  }
+  .CodeMirror.over-gutter,
+  .CodeMirror-activeline {
+    .CodeMirror-foldgutter-open:after {
+      // Arrows when hovering on the gutter
+      color: @syntax-gutter;
+    }
+  }
+  .CodeMirror-foldmarker {
+    // The [...] marking collapsed code
+    border-color: @grey;
+    background-color: @grey;
+    color: @dark-grey;
+  }
+  .CodeMirror .CodeMirror-linewidget img.inline-widget {
+    background: rgba(0,0,0,0.05);
+  }
+  .CodeMirror-searching {
+    // Ctrl + F results
+    background-color: @dark-orange;
+    // Selected result
+    &.searching-current-match {
+      background-color: @light-orange;
+    }
+  }
+
+  /* All 'dem swatches */
+
+  .CodeMirror {
+    .cm-atom {
+      color: @dark-orange;
+    }
+
+    .cm-keyword {
+      color: @light-red;
+    }
+
+    .cm-formatting.cm-formatting-code-block {
+      color: @dark-grey;
+    }
+
+    .cm-formatting + .cm-keyword {
+      color: @black;
+    }
+
+    .cm-formatting-list.cm-variable-3 {
+      color: @blue;
+      font-weight: bold;
+    }
+    .cm-formatting-list.cm-variable-2 {
+      color: @light-red;
+      font-weight: bold;
+    }
+
+    .cm-formatting-list.cm-formatting-list-ol/*.cm-variable-2*/ {
+      color: @light-red;
+    }
+
+    .cm-formatting.cm-formatting-task.cm-meta {
+        color: @light-orange;
+    }
+    .cm-formatting.cm-formatting-task.cm-property {
+      color: @blue;
+    }
+
+    .cm-operator {
+      color: @syntax-accent;
+    }
+
+    .cm-builtin {
+      color: @cyan;
+    }
+
+    .cm-number {
+      color: @light-orange;
+    }
+
+    .cm-def {
+      color: @black;
+    }
+
+    .cm-string,
+    .cm-string-2 {
+      color: @green;
+    }
+
+    .cm-comment {
+      color: @grey;
+      font-style: italic;
+    }
+
+    .cm-variable {
+      color: @light-orange;
+    }
+    .cm-variable-2,
+    .cm-variable-3 {
+      color: @black;
+    }
+
+    .cm-strikethrough {
+      color: @dark-grey;
+    }
+
+    .cm-tag {
+      color: @dark-red;
+    }
+
+    .cm-meta {
+      color: @dark-orange;
+    }
+
+    .cm-attribute,
+    .cm-property {
+      color: @blue;
+    }
+
+    .cm-qualifier {
+      color: @dark-orange;
+    }
+
+    .cm-error {
+      color: @light-red;
+    }
+
+    .cm-url,
+    .cm-hr {
+      color: @green;
+    }
+
+    .cm-bracket {
+      color: @syntax-accent;
+    }
+    .cm-formatting-header {
+      opacity: 0.3;
+    }
+    .cm-header {
+      color: @blue;
+    }
+    .cm-link {
+      color: @green;
+      text-underline-position: under;
+    }
+    .cm-rangeinfo {
+      color: @dark-orange;
+    }
+    .cm-quote {
+      color: @grey;
+      font-style: italic;
+    }
+    .cm-whitespace::before {
+      color: @grey;
+      opacity: 0.4;
+    }
+    .cm-formatting-quote, .cm-formatting-strong, .cm-formatting-em {
+      opacity: 0.6;
+    }
+    .cm-strong {
+      color: @light-red;
+    }
+    .cm-em {
+      color: @dark-orange;
+    }
+
+    // carriage return
+    .CodeMirror-code > div > pre > span::after, .CodeMirror-line > span::after {
+      color: @black;
+      opacity: 0.4;
+    }
+
+    .cm-inline-code {
+      background: rgba(0, 0, 0, 0.04);
+      color: @dark-grey;
+    }
+
+    .gfm-codeblock-bg.CodeMirror-linebackground {
+      background: rgba(0, 0, 0, 0.04);
+    }
+
+    .cm-table-sep, .table-row.table-row-1 {
+      color: @blue;
+    }
+  }
+
+  /* Active Line Highlight support */
+  .CodeMirror-activeline-background, .CodeMirror-activeline-gutter {
+    background-color: fade(@light-grey, 40%) !important;
+  }
+}
