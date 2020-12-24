@@ -1,1 +1,2 @@
-# One Light for Inkdrop
+# One Light
+One Light syntax theme for Inkdrop
