@@ -141,7 +141,7 @@
   opacity: 0.3;
 }
 .editor .CodeMirror .cm-header {
-  color: #4078f2;
+  color: #526fff;
 }
 .editor .CodeMirror .cm-link {
   color: #50a14f;
@@ -175,11 +175,11 @@
   opacity: 0.4;
 }
 .editor .CodeMirror .cm-inline-code {
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.03);
   color: #696c77;
 }
 .editor .CodeMirror .gfm-codeblock-bg.CodeMirror-linebackground {
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.03);
 }
 .editor .CodeMirror .cm-table-sep,
 .editor .CodeMirror .table-row.table-row-1 {
