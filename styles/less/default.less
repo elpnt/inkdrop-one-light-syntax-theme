@@ -74,36 +74,75 @@
   /* All 'dem swatches */
 
   .CodeMirror {
-    .cm-atom {
-      color: @dark-orange;
+    .cm-atom { color: @dark-orange; }
+    .cm-builtin { color: @cyan; }
+    .cm-keyword { color: @purple; }
+    .cm-number { color: @orange; }
+    .cm-operator { color: @syntax-accent; }
+    .cm-def { color: @black; }
+    .cm-keyword + .cm-def {
+      color: @blue;
+    }
+    .cm-string,
+    .cm-string-2 {
+      color: @green;
+    }
+    .cm-comment {
+      color: @grey;
+      font-style: italic;
+    }
+    .cm-variable {
+      color: @red;
+    }
+    .cm-variable-2,
+    .cm-variable-3 {
+      color: @black;
+    }
+    .cm-keyword + .cm-variable {
+      color: @blue;
     }
 
-    .cm-keyword {
-      color: @purple;
-    }
-
+    .cm-formatting.cm-formatting-code,
     .cm-formatting.cm-formatting-code-block {
-      color: @dark-grey;
-    }
-
-    .cm-formatting + .cm-keyword,
-    .cm-keyword+ .cm-keyword {
       color: @black;
     }
 
-    .cm-formatting-list.cm-variable-3 {
+    // Quote
+    .cm-quote {
+      color: @grey;
+      font-style: italic;
+    }
+
+    // Inline code
+    .cm-inline-code,
+    .cm-formatting.cm-formatting-code.cm-inline-code{
+      background: rgba(0, 0, 0, 0.03);
+      color: @dark-grey;
+    }
+
+    // Bullet list
+    .cm-formatting.cm-formatting-list.cm-formatting-list-ul.cm-variable-2 {
       color: @blue;
-      font-weight: bold;
     }
-    .cm-formatting-list.cm-variable-2 {
-      color: @red;
-      font-weight: bold;
-    }
-
-    .cm-formatting-list.cm-formatting-list-ol {
+    .cm-formatting.cm-formatting-list.cm-formatting-list-ul.cm-variable-3 {
       color: @red;
     }
+    .cm-formatting.cm-formatting-list.cm-formatting-list-ul.cm-keyword {
+      color: @orange;
+    }
 
+    // Number list
+    .cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-variable-2 {
+      color: @blue;
+    }
+    .cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-variable-3 {
+      color: @red;
+    }
+    .cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-keyword {
+      color: @orange;
+    }
+
+    // Task list box
     .cm-formatting.cm-formatting-task.cm-meta {
       color: @grey;
     }
@@ -111,54 +150,17 @@
       color: @blue;
     }
 
-    .cm-operator {
-      color: @syntax-accent;
-    }
-
-    .cm-builtin {
-      color: @cyan;
-    }
-
-    .cm-number {
-      color: @orange;
-    }
-
-    .cm-def {
-      color: @black;
-    }
-    .cm-keyword + .cm-def {
-      color: @blue;
-    }
-
-    .cm-string,
-    .cm-string-2 {
-      color: @green;
-    }
-
-    .cm-comment {
-      color: @grey;
-      font-style: italic;
-    }
-
-    .cm-variable {
-      color: @orange;
-    }
-    .cm-variable-2,
-    .cm-variable-3 {
+    // List's item
+    .cm-formatting + .cm-keyword,
+    .cm-formatting + .cm-variable-2,
+    .cm-formatting + .cm-variable-3 {
       color: @black;
     }
 
-    .cm-strikethrough {
-      color: @dark-grey;
-    }
-
-    .cm-tag {
-      color: @dark-red;
-    }
-
-    .cm-meta {
-      color: @dark-orange;
-    }
+    .cm-strikethrough { color: @dark-grey; }
+    .cm-tag { color: @dark-red; }
+    .cm-meta { color: @dark-orange; }
+    .cm-error { color: @red; }
 
     .cm-attribute,
     .cm-property {
@@ -169,10 +171,16 @@
       color: @dark-orange;
     }
 
-    .cm-error {
-      color: @red;
+    // Header
+    .cm-header {
+      color: @syntax-accent;
+    }
+    // ###
+    .cm-formatting-header {
+      opacity: 0.5;
     }
 
+    // Horizontal line
     .cm-hr {
       color: @green;
     }
@@ -180,19 +188,12 @@
     .cm-bracket {
       color: @syntax-accent;
     }
-    .cm-formatting-header {
-      opacity: 0.3;
-    }
-    .cm-header {
-      color: @syntax-accent;
-    }
 
+    // Link
     .cm-link {
       font-weight: bold;
       color: @blue;
-      // text-decoration: underline;
     }
-
     .cm-url {
       color: @blue;
       opacity: 0.8;
@@ -200,10 +201,6 @@
 
     .cm-rangeinfo {
       color: @dark-orange;
-    }
-    .cm-quote {
-      color: @grey;
-      font-style: italic;
     }
     .cm-whitespace::before {
       color: @grey;
@@ -225,17 +222,12 @@
       opacity: 0.4;
     }
 
-    .cm-inline-code {
-      background: rgba(0, 0, 0, 0.03);
-      color: @dark-grey;
-    }
-
     .gfm-codeblock-bg.CodeMirror-linebackground {
       background: rgba(0, 0, 0, 0.03);
     }
 
     .cm-table-sep, .table-row.table-row-1 {
-      color: @black;
+      color: @green;
     }
   }
 

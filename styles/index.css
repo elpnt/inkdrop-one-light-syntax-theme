@@ -58,41 +58,17 @@
 .editor .CodeMirror .cm-atom {
   color: #986801;
 }
-.editor .CodeMirror .cm-keyword {
-  color: #a626a4;
-}
-.editor .CodeMirror .cm-formatting.cm-formatting-code-block {
-  color: #696c77;
-}
-.editor .CodeMirror .cm-formatting + .cm-keyword,
-.editor .CodeMirror .cm-keyword + .cm-keyword {
-  color: #494b53;
-}
-.editor .CodeMirror .cm-formatting-list.cm-variable-3 {
-  color: #4078f2;
-  font-weight: bold;
-}
-.editor .CodeMirror .cm-formatting-list.cm-variable-2 {
-  color: #e45649;
-  font-weight: bold;
-}
-.editor .CodeMirror .cm-formatting-list.cm-formatting-list-ol {
-  color: #e45649;
-}
-.editor .CodeMirror .cm-formatting.cm-formatting-task.cm-meta {
-  color: #a0a1a7;
-}
-.editor .CodeMirror .cm-formatting.cm-formatting-task.cm-property {
-  color: #4078f2;
-}
-.editor .CodeMirror .cm-operator {
-  color: #526fff;
-}
 .editor .CodeMirror .cm-builtin {
   color: #0184bc;
 }
+.editor .CodeMirror .cm-keyword {
+  color: #a626a4;
+}
 .editor .CodeMirror .cm-number {
   color: #c18401;
+}
+.editor .CodeMirror .cm-operator {
+  color: #526fff;
 }
 .editor .CodeMirror .cm-def {
   color: #494b53;
@@ -109,10 +85,55 @@
   font-style: italic;
 }
 .editor .CodeMirror .cm-variable {
-  color: #c18401;
+  color: #e45649;
 }
 .editor .CodeMirror .cm-variable-2,
 .editor .CodeMirror .cm-variable-3 {
+  color: #494b53;
+}
+.editor .CodeMirror .cm-keyword + .cm-variable {
+  color: #4078f2;
+}
+.editor .CodeMirror .cm-formatting.cm-formatting-code,
+.editor .CodeMirror .cm-formatting.cm-formatting-code-block {
+  color: #494b53;
+}
+.editor .CodeMirror .cm-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+.editor .CodeMirror .cm-inline-code,
+.editor .CodeMirror .cm-formatting.cm-formatting-code.cm-inline-code {
+  background: rgba(0, 0, 0, 0.03);
+  color: #696c77;
+}
+.editor .CodeMirror .cm-formatting.cm-formatting-list.cm-formatting-list-ul.cm-variable-2 {
+  color: #4078f2;
+}
+.editor .CodeMirror .cm-formatting.cm-formatting-list.cm-formatting-list-ul.cm-variable-3 {
+  color: #e45649;
+}
+.editor .CodeMirror .cm-formatting.cm-formatting-list.cm-formatting-list-ul.cm-keyword {
+  color: #c18401;
+}
+.editor .CodeMirror .cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-variable-2 {
+  color: #4078f2;
+}
+.editor .CodeMirror .cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-variable-3 {
+  color: #e45649;
+}
+.editor .CodeMirror .cm-formatting.cm-formatting-list.cm-formatting-list-ol.cm-keyword {
+  color: #c18401;
+}
+.editor .CodeMirror .cm-formatting.cm-formatting-task.cm-meta {
+  color: #a0a1a7;
+}
+.editor .CodeMirror .cm-formatting.cm-formatting-task.cm-property {
+  color: #4078f2;
+}
+.editor .CodeMirror .cm-formatting + .cm-keyword,
+.editor .CodeMirror .cm-formatting + .cm-variable-2,
+.editor .CodeMirror .cm-formatting + .cm-variable-3 {
   color: #494b53;
 }
 .editor .CodeMirror .cm-strikethrough {
@@ -124,6 +145,9 @@
 .editor .CodeMirror .cm-meta {
   color: #986801;
 }
+.editor .CodeMirror .cm-error {
+  color: #e45649;
+}
 .editor .CodeMirror .cm-attribute,
 .editor .CodeMirror .cm-property {
   color: #4078f2;
@@ -131,19 +155,16 @@
 .editor .CodeMirror .cm-qualifier {
   color: #986801;
 }
-.editor .CodeMirror .cm-error {
-  color: #e45649;
+.editor .CodeMirror .cm-header {
+  color: #526fff;
+}
+.editor .CodeMirror .cm-formatting-header {
+  opacity: 0.5;
 }
 .editor .CodeMirror .cm-hr {
   color: #50a14f;
 }
 .editor .CodeMirror .cm-bracket {
-  color: #526fff;
-}
-.editor .CodeMirror .cm-formatting-header {
-  opacity: 0.3;
-}
-.editor .CodeMirror .cm-header {
   color: #526fff;
 }
 .editor .CodeMirror .cm-link {
@@ -156,10 +177,6 @@
 }
 .editor .CodeMirror .cm-rangeinfo {
   color: #986801;
-}
-.editor .CodeMirror .cm-quote {
-  color: #a0a1a7;
-  font-style: italic;
 }
 .editor .CodeMirror .cm-whitespace::before {
   color: #a0a1a7;
@@ -181,16 +198,12 @@
   color: #494b53;
   opacity: 0.4;
 }
-.editor .CodeMirror .cm-inline-code {
-  background: rgba(0, 0, 0, 0.03);
-  color: #696c77;
-}
 .editor .CodeMirror .gfm-codeblock-bg.CodeMirror-linebackground {
   background: rgba(0, 0, 0, 0.03);
 }
 .editor .CodeMirror .cm-table-sep,
 .editor .CodeMirror .table-row.table-row-1 {
-  color: #494b53;
+  color: #50a14f;
 }
 .editor .CodeMirror-activeline-background,
 .editor .CodeMirror-activeline-gutter {
