@@ -79,14 +79,15 @@
     }
 
     .cm-keyword {
-      color: @red;
+      color: @purple;
     }
 
     .cm-formatting.cm-formatting-code-block {
       color: @dark-grey;
     }
 
-    .cm-formatting + .cm-keyword {
+    .cm-formatting + .cm-keyword,
+    .cm-keyword+ .cm-keyword {
       color: @black;
     }
 
@@ -124,6 +125,9 @@
 
     .cm-def {
       color: @black;
+    }
+    .cm-keyword + .cm-def {
+      color: @blue;
     }
 
     .cm-string,
@@ -169,7 +173,6 @@
       color: @red;
     }
 
-    .cm-url,
     .cm-hr {
       color: @green;
     }
@@ -183,10 +186,18 @@
     .cm-header {
       color: @syntax-accent;
     }
+
     .cm-link {
-      color: @green;
-      text-underline-position: under;
+      font-weight: bold;
+      color: @blue;
+      // text-decoration: underline;
     }
+
+    .cm-url {
+      color: @blue;
+      opacity: 0.8;
+    }
+
     .cm-rangeinfo {
       color: @dark-orange;
     }
@@ -224,7 +235,7 @@
     }
 
     .cm-table-sep, .table-row.table-row-1 {
-      color: @blue;
+      color: @black;
     }
   }
 
