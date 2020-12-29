@@ -1,4 +1,4 @@
-# One Light
+# One Light Syntax
 
 One Light syntax theme for Inkdrop
 
