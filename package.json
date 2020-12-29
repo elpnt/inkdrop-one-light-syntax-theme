@@ -2,6 +2,8 @@
   "version": "0.0.0",
   "name": "one-light-syntax",
   "description": "One Light syntax theme",
+  "repository": "https://github.com/elpnt/inkdrop-one-light-syntax-theme",
+  "author": "elpnt<quantumular@gmail.com>",
   "theme": "syntax",
   "scripts": {
     "build": "lessc styles/less/default.less ./styles/index.css"
